@@ -1,4 +1,5 @@
 import React from 'react'
+import '../NavBar/Nav.css'
 
 const Nav = ({user}) => {
   return (
