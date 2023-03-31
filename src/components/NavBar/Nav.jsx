@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Nav = () => {
+const Nav = ({user}) => {
   return (
-    <div>Nav</div>
+    <div>
+      <h1>{user?.DisplayName}</h1>
+    </div>
   )
 }
 
