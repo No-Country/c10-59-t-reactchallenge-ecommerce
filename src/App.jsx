@@ -1,15 +1,13 @@
-import { useState } from 'react'
-
-import './App.css'
+import { useState } from "react";
+import Nav from "./components/NavBar/Nav";
+import Auth from "./components/Auth/Auth";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-   <h1>Hola mundo</h1>
+     <Auth/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
