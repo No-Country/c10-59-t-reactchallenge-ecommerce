@@ -1,10 +1,16 @@
 import React from 'react'
 import '../NavBar/Nav.css'
+import { useSelector } from 'react-redux'
 
-const Nav = ({user}) => {
+const Nav = () => {
+  const user = useSelector(state => state.User)
+  console.log(user);
   return (
+
     <div>
-      <h1>{user?.DisplayName}</h1>
+      <h1>{user?.user}</h1>
+       <img src={user?.photo} alt="" /> 
+       <h2>{user?.email}</h2>
     </div>
   )
 }
