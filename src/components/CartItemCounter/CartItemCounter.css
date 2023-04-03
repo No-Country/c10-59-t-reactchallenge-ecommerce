@@ -1,0 +1,30 @@
+.cart-counter-container {
+    background-color: #918585;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border-radius: 15px;
+}
+
+.cart-counter-container span,
+.cart-counter-container button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.cart-counter-container button {
+    border: none;
+    padding: 2px 9px;
+    background-color: transparent;
+    
+}
+
+.cart-counter-container button:first-child {
+    border-right: 1px solid black;
+}
+
+.cart-counter-container button:last-child {
+    border-left: 1px solid black;
+}
