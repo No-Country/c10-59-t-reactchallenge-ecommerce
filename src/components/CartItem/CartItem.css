@@ -1,0 +1,20 @@
+.cart-item-container {
+    background-color: #D9D9D9;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    padding: 1em;
+    border-radius: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+    margin-bottom: 2em;
+}
+
+.cart-item-container img {
+    width: 100%;
+}
+
+.cart-item-desc p, 
+.cart-item-total p:first-child {
+    margin-bottom: 10px;
+}
