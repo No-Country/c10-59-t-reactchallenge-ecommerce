@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "../Auth/auth.css"
 import { useDispatch } from 'react-redux';
 import { setUserAuth } from '../../store/slices/userAuth.slice';
+import { AiFillGoogleCircle } from 'react-icons/ai'
 
 const AuthGoogle = () => {
 
@@ -38,24 +39,11 @@ const AuthGoogle = () => {
 
   return (
     <>
-    <div className="auth">
-      <h1 className="tittle">Login Google auth!</h1>
-      {/* <p>{typeof user}</p>
-      <p>{user?.displayName}</p>
-      <p>{user?.email}</p>
-      {user == null ? 
-      <img src="http://cdn.onlinewebfonts.com/svg/img_131793.png" width={50} height={50} alt='no hay imagen'/>
-      :
-      <img src={`${user?.photoURL}`} width={100} height={100} alt={user?.displayName}/> 
-    }  */}
-      
-      {user == user?.email ? 
-        <button onClick={login}>login</button>
-        : 
-        <button onClick={() => signOut(auth)}> Cerrar session</button>
-      }
-
-    </div>
+    
+<button>
+  <AiFillGoogleCircle onClick={login}/>
+</button>
+    
   </>
   )
 }
