@@ -19,7 +19,6 @@ const AuthGoogle = () => {
       const result = await signInWithPopup(auth, googleAuth);
     };
     
-    console.log();
     
     useEffect(() => {
       
