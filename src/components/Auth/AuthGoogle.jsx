@@ -19,12 +19,11 @@ const AuthGoogle = () => {
       const result = await signInWithPopup(auth, googleAuth);
     };
     
-    console.log();
     
     useEffect(() => {
       
       const usuarios = {
-        user: user?.displayName,
+        username: user?.displayName,
         email: user?.email,
         photo: user?.photoURL
       }

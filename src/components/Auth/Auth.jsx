@@ -12,9 +12,12 @@ const Auth = () => {
 
   return (
 <>
+{/* <SingIn/> */}
 <AuthGoogle/>
+{/* <Signup/> */}
 
- </>
+
+</>
   )
 }
 
