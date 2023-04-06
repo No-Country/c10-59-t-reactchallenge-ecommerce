@@ -23,7 +23,7 @@ const AuthGoogle = () => {
     useEffect(() => {
       
       const usuarios = {
-        user: user?.displayName,
+        username: user?.displayName,
         email: user?.email,
         photo: user?.photoURL
       }
