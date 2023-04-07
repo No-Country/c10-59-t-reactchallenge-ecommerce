@@ -6,8 +6,10 @@ import { CartContainer } from "./components/CartContainer/CartContainer";
 function App() {
   return (
     <div className="App">
-     <Auth/>
-     
+      
+      <Nav />
+      <Auth />
+      
     </div>
   );
 }
