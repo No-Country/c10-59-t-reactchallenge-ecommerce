@@ -1,6 +1,6 @@
 import "./CartItem.css";
 import { CartItemCounter } from "../CartItemCounter/CartItemCounter";
-import Img from "../../assets/Img/images (2).jpg"
+import Img from "../../../assets/Img/images (2).jpg";
 
 export const CartItem = () => {
   return (

@@ -23,15 +23,23 @@ const SingIn = () => {
     
 
   return (
-    <div>
+    <div className='form__app'>
         
-  <form action="">
-  <h1>Login</h1>
-  <input ref={emailRef} type="email" placeholder="Email" />
-  <input ref={passwordRef} type="password" placeholder="Password" />
+  <form action="" className='form__form'>
+  <h1 className='form__title'>Login</h1>
+  <div className="form__inputs">
+   <div className='div__form'>
+   <h3 className='form__imput-title'>Email</h3>
+  <input className='form__input' ref={emailRef} type="email" placeholder="Email" />
+   </div>
+  <div>
+  <h3 className='form__imput-title'>Password</h3>
+  <input className='form__input' ref={passwordRef} type="password" placeholder="Password" />
+  </div>
+  </div>
 
-  <button>
-    <span onClick={SignInLogin}>Login</span>
+  <button className='btn__auth' onClick={SignInLogin}>
+Inicia Sesion
   </button>
  
 </form>
