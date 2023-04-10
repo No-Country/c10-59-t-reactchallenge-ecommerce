@@ -10,10 +10,11 @@ import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <> 
-<Auth/>
-    
-    </>
+    <div className="App">
+
+      <Nav/>
+     <Auth/>
+    </div>
   );
 }
 
