@@ -29,11 +29,11 @@ const SingIn = () => {
   <h1 className='form__title'>Login</h1>
   <div className="form__inputs">
    <div className='div__form'>
-   <h3 className='form__imput-title'>Email</h3>
+   <span className='form__imput-title'> Email</span>
   <input className='form__input' ref={emailRef} type="email" placeholder="Email" />
    </div>
   <div>
-  <h3 className='form__imput-title'>Password</h3>
+  <span className='form__imput-title'>Password</span>
   <input className='form__input' ref={passwordRef} type="password" placeholder="Password" />
   </div>
   </div>
