@@ -38,8 +38,8 @@ const SingIn = () => {
   </div>
   </div>
 
-  <button className='btn__auth'>
-    <span className='btn__click' onClick={SignInLogin}>Inicia Sesion</span>
+  <button className='btn__auth' onClick={SignInLogin}>
+Inicia Sesion
   </button>
  
 </form>

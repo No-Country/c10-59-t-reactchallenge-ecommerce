@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import "../Auth/auth.css"
 import { useDispatch } from 'react-redux';
 import { setUserAuth } from '../../store/slices/userAuth.slice';
-import { AiFillGoogleCircle } from 'react-icons/ai'
+import { FcGoogle } from 'react-icons/fc'
 
 const AuthGoogle = () => {
 
@@ -39,8 +39,9 @@ const AuthGoogle = () => {
   return (
     <>
     
-<button>
-  <AiFillGoogleCircle onClick={login}/>
+<button onClick={login} className='auth__google-btn'>
+  <FcGoogle className='g-icon' />
+  REGISTRARSE
 </button>
     
   </>
