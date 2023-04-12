@@ -1,0 +1,9 @@
+.product-list-container {
+    border: 2px solid red;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+}
+
