@@ -15,7 +15,7 @@ const Signup = () => {
         emailRef.current.value,
         passwordRef.current.value
       );
-      console.log(response.user);
+      // console.log(response.user);
     } catch (error) {
       console.log(error);
     }

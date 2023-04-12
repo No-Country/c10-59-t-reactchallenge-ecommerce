@@ -41,7 +41,7 @@ const AuthGoogle = () => {
     
 <button onClick={login} className='auth__google-btn'>
   <FcGoogle className='g-icon' />
-  REGISTRARSE
+
 </button>
     
   </>

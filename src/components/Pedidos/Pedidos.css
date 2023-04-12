@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Work+Sans:wght@700&display=swap');
+
+.pedidos__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pedidos__detalles {
+    background: #FCFCBD;
+    border: 3px solid #000000;
+    width: 320px;
+height: 174px;
+margin: 2rem 0;
+display: flex;
+flex-direction: column;
+}
+
+.input input {
+    width: 321px;
+    height: 44px;
+    background: #FEFEFE;
+    border: 1.53333px solid #1F1F1F;
+    box-shadow: 3.06667px 3.06667px 0px #1F1F1F;
+    border-radius: 2.3px;
+    display: flex;
+  align-items: flex-end; 
+  padding: .7rem;
+}
+.input {
+    padding: 1rem 0;
+
+}
+.input h2 {
+    letter-spacing: 0.374px;
+    font-family: 'Archivo', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+
+color: #000000;
+}
+
+.pedidos__detalles-title {
+    letter-spacing: 0.374px;
+   
+color: #000000;
+font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 41px;
+padding: 0 .7rem ;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid black;
+    
+}
+
+.pedidos__btn {
+    width: 182px;
+height: 53px;
+    background: #FFFF00;
+border: 4px solid #1F1F1F;
+box-shadow: 4px 4px 0px #1F1F1F;
+font-family: 'Archivo';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 17px;
+}
+
+.detalles__span, .total__span-detalles {
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+margin: 4px 0;
+
+
+letter-spacing: 0.374px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding:.5rem .7rem;
+    font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 0.374px;
+
+color: #000000;
+}
+
+.detalle--span{
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    display: flex;
+}

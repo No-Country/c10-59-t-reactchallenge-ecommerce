@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap");
 
 .form__app {
   width: 100%;
@@ -22,11 +22,12 @@ input {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  align-items: center;
 }
 
 .form__title {
   text-align: center;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 .form__inputs {
@@ -38,17 +39,16 @@ input {
 }
 
 .form__input {
-  border: 2.5px solid #1F1F1F;
-  box-shadow: 2px 3px 0px #1F1F1F;
-    padding: 1rem;
+  border: 2.5px solid #1f1f1f;
+  box-shadow: 2px 3px 0px #1f1f1f;
+  padding: 1rem;
   width: 90%;
 
   height: 50px;
-  margin:0 1rem;
-
+  margin: 0 1rem;
 }
 .form__input::placeholder {
-  color: #ffffff85;
+  color: #00000085;
 }
 
 .form__imput-title {
@@ -56,80 +56,84 @@ input {
   font-weight: bold;
   font-size: 16px;
   line-height: 41px;
-  font-family: 'Archivo', sans-serif;
-
+  font-family: "Archivo", sans-serif;
 }
-
-
-
-
-
 
 .btn__auth button {
   cursor: pointer;
 }
 
 .btn__auth {
-  border: none;
-  border-radius: 10px;
-  width: 80%;
-  background-color: #4a3b3b;
-  color: white;
-cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin: 0 auto;
-  height: 45px;
+  width: 90%;
+
+  height: 52.43px;
+  left: 20px;
+  top: 385px;
+
+  background: #ffff00;
+  border: 2.5px solid #1f1f1f;
+  box-shadow: 2px 3px 0px #1f1f1f;
+  font-family: 'Archivo';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 17px;
 }
-
-
 
 /* //////////ACCESO A CUENTA/////////////// */
 
+.auth__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .auth__title {
   text-align: center;
   font-size: 24px;
   margin: 20px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
-
 }
 
 .auth__links {
+ 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 50vh;
   flex-direction: column;
   gap: 2rem;
 }
 
-.auth__links button, .auth__google-btn button {
+.auth__links button {
   width: 309px;
   height: 48px;
-  border-radius:8px ;
+  
   border: none;
   font-size: 14px;
   cursor: pointer;
-  background: #D9D9D9;
+  background: #FFFF00;
+  border: 2.5px solid #1F1F1F;
+  box-shadow: 2px 3px 0px #1F1F1F;
 }
 
 .auth__links a {
   all: unset;
 
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
   letter-spacing: 0.374px;
   line-height: 41px;
 }
 
 .auth__google-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
+  width: 39px;
+  height: 39px;
+  background: #fefefe;
+  border: 2.6px solid #1f1f1f;
+  box-shadow: 2.6px 2.6px 0px #1f1f1f;
 }
 
 .auth__google-btn .g-icon {
@@ -139,4 +143,28 @@ cursor: pointer;
 
 .auth__links button:nth-child(3) {
   margin-top: 28px;
+}
+
+
+.division {
+  width: 100vw;
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 2rem; */
+}
+
+.line{
+  width: 50%;
+  
+  height: 0;
+  border: 2px solid #1F1F1F;
+  font-weight: 700;
+}
+
+.O {
+  margin: 0 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
 }
