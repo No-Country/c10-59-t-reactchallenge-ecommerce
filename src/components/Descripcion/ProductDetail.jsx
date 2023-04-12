@@ -5,7 +5,7 @@ import Img from "../../assets/Img/Tipos/apa-ipa.jpg";
 import { CartItemCounter } from "../Cart/CartItemCounter/CartItemCounter";
 import { Button } from "react-bootstrap";
 
-const Descipcion = () => {
+const ProductDetail = () => {
 
   const [dataDescripcion, setDataDescripcion] = useState({});
   const { id } = useParams();
@@ -52,4 +52,4 @@ const Descipcion = () => {
     </>
   )
  }
-export default Descipcion;
+export default ProductDetail;
