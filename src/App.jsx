@@ -7,6 +7,7 @@ import { CartItem } from "./components/Cart/CartItem/CartItem";
 import Signup from "./components/Auth/Signup";
 import ProtectedRoutes from "./components/helpers/ProtectedRoutes";
 import { Link } from "react-router-dom";
+import Descipcion from "./components/Descripcion/descripcion";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      
      <Nav />
      <Auth/>
+     <Descipcion />
      
     </div>
   );
