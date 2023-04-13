@@ -9,7 +9,9 @@ export const CartItemCounter = () => {
   }
 
   const decrease = () => {
-    setCounter(counter - 1);
+    if(!(counter === 0)) {
+      setCounter(counter - 1);
+    }
   }
 
   return (

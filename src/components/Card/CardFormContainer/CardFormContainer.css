@@ -1,36 +1,36 @@
 .rccs {
-    margin: 25px auto 50px !important;
+    margin: 15px auto 10px !important;
 }
 
 .card-form {
-    padding: 15px;
+    padding: 25px;
 }
 
 .form-groups-container,
 .form-group {
     display: flex;
-    gap: 10px;
+    padding-bottom: 10px;
 }
 
+.form-group {gap: 5px;}
+
+.form-groups-container {gap: 25px;}
 
 input {
     width: 100%;
     padding: 10px;
-    border: none;
-    outline: none; 
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color 0.6s ease-in-out;
+    background: #FEFEFE;
+    border: 2px solid #1F1F1F;
+    box-shadow: 3.06667px 3.06667px 0px #1F1F1F;    
+    border-radius: 2.3px;
     
 }
 
-input:focus {
-    border-bottom-color: rgb(0, 0, 0);
-    border-bottom-width: 2px;
-}
 
-.form-group label,
-.form-group input {
-    font-size: 1.2em;
+.form-group label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 .form-group:not(.form-group-special) {
@@ -38,6 +38,22 @@ input:focus {
     margin-bottom: 10px;
 }
 
-.form-groups-container {
-
+.form-groups-container .form-group:first-child {
+    flex-basis: 60%;
 }
+
+.form-groups-container .form-group:last-child {
+    flex-basis: 40%;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 149px;
+    height: 47px;
+    background-color: #FFFF00;
+    border: 2.5px solid #000000;
+    box-shadow: 2px 3px 0px #1F1F1F;
+}   
