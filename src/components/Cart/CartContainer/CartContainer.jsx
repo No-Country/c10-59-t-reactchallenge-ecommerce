@@ -2,7 +2,7 @@ import "./CartContainer.css";
 import { useState } from "react";
 import { CartItem } from "../CartItem/CartItem";
 
-export const CartContainer = () => {
+const CartContainer = () => {
     const [cartList, setCartList] = useState([{},{},{}]);
 
     return(
@@ -17,3 +17,5 @@ export const CartContainer = () => {
         </>
     );
 }
+
+export default CartContainer;
