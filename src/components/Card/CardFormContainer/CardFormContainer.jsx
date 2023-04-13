@@ -45,20 +45,20 @@ export const CardFormContainer = () => {
               <input name="number" type="tel" placeholder="Ingrese el número de tarjeta" maxLength={16} onChange={handleChange}  onFocus={handleFocus}/>
             </div>
             <div className="form-group">
-              <label htmlFor="userName">Nombre</label>
+              <label htmlFor="userName">Nombre completo</label>
               <input name="name" type="text" placeholder="Ingrese su nombre" maxLength={20} onChange={handleChange}  onFocus={handleFocus}/>
             </div>
             <div className="form-groups-container">
               <div className="form-group">
-                <label htmlFor="cvc">Expiración</label>
-                <input name="expiry" type="tel" placeholder="Fecha" maxLength={4} onChange={handleChange} onFocus={handleFocus}/>
+                <label htmlFor="cvc">Fecha de expiración</label>
+                <input name="expiry" type="tel" placeholder="mm/yy" maxLength={4} onChange={handleChange} onFocus={handleFocus}/>
               </div>
               <div className="form-group">
                 <label htmlFor="cvc">CVC</label>
                 <input name="cvc" type="tel" placeholder="CVC" maxLength={3}  onChange={handleChange} onFocus={handleFocus}/>
               </div>
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit">Guardar</button>
         </form>
     </>
   );

@@ -1,4 +1,4 @@
-import { CartItemCounter } from "../Cart/CartItemCounter/CartItemCounter";
+import { CartItemCounter } from "../../Cart/CartItemCounter/CartItemCounter";
 import { Button } from "react-bootstrap";
 
 const ProductDetail = ({product}) => {
