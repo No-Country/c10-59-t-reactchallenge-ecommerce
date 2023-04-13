@@ -16,33 +16,39 @@
 
 .carousel-buttons {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   z-index: 1;
 }
 
 .carousel-button {
   cursor: pointer;
-  margin: 0 10px;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  font-size: 60px;
+  font-family: "Arial Unicode MS", "Segoe UI Symbol", "DejaVu Sans", "Symbola", sans-serif;
+  color: #fff;
   transition: background-color 0.3s ease;
 }
 
-.carousel-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+.carousel-button.left {
+  margin-left: 20px;
+}
+
+.carousel-button.right {
+  margin-right: 20px;
+}
+
+.carousel-button:focus {
+  outline: none;
 }
 
 @media (max-width: 768px) {
@@ -55,10 +61,18 @@
   .carousel-container {
     height: 200px;
   }
-
+  
   .carousel-button {
     width: 30px;
     height: 30px;
     font-size: 18px;
+  }
+  
+  .carousel-button.left {
+    margin-left: 10px;
+  }
+  
+  .carousel-button.right {
+    margin-right: 10px;
   }
 }
