@@ -1,12 +1,15 @@
 import React from 'react'
 import '../helpers/helper.css'
+import check from "../../assets/iconos/icon-check-green.svg";
+import { Link } from 'react-router-dom';
+
 
 const CardEncantado = () => {
     return (
         <div className='Card__done'>
-            <div className="verified"></div>
+           <img className="verified" src={check} alt="Check" />{" "}
             <p className='card__p'><span>¡Encantado de</span> <br /> conocerte¡</p>
-    <button className='btn__card'>INICIO</button>
+            <button className="btn__card"><Link to="/">INICIO</Link></button>
         </div>
       )
     
