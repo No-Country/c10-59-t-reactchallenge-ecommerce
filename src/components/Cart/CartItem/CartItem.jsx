@@ -1,19 +1,22 @@
 import "./CartItem.css";
 import { CartItemCounter } from "../CartItemCounter/CartItemCounter";
-import Img from "../../../assets/Img/images (2).jpg";
+import Svg from "../../../assets/iconos/icon-red-cross.svg"
 
 export const CartItem = () => {
   return (
     <div className="cart-item-container">
-        <img src={Img} alt="#" />
         <div className="cart-item-desc">
-            <p>ITEM</p>
-            <CartItemCounter/>
+            <p>Rabieta IPA</p>
+            <hr />
+            <div>
+              <CartItemCounter/>
+            </div>
         </div>
         <div className="cart-item-total">
             <p>Total</p>
             <p>$1500</p>
         </div>
+        <img src={Svg} alt="" />
     </div>
   );
 }
