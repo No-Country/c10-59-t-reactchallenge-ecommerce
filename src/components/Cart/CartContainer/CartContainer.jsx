@@ -1,13 +1,14 @@
 import "./CartContainer.css";
 import { useState } from "react";
 import { CartItem } from "../CartItem/CartItem";
+import NavSection from '../../NavSection/NavSection';
 
 const CartContainer = () => {
     const [cartList, setCartList] = useState([{},{},{}]);
 
     return(
         <>
-            <h2>Cesta</h2>
+            <NavSection title="Carrito"/>
             <div className="cart-container">
                 {cartList.length > 0 ?
                     cartList.map((item) => <CartItem key={item.id}/>) :
