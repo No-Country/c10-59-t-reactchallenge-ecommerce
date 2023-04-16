@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../Nav2/nav.css";
-import { AiOutlineMenu } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 import close from "../../assets/iconos/icon-red-cross.svg";
 import { slide as Menu } from "react-burger-menu";
 import NavMenu from "./NavMenu";
+import Menuhambur from '../../assets/iconos/Menusvg.svg'
 
 
 const Nav2 = () => {
@@ -24,10 +25,8 @@ const Nav2 = () => {
           <NavMenu isopen={isopen} />
         </div>
       ) : (
-        <AiOutlineMenu
-          className="Menu__hamburguer"
-          onClick={() => setIsopen(true)}
-        />
+      <img src={Menuhambur}   className="Menu__hamburguer"
+      onClick={() => setIsopen(true)} alt="" />
       )}
     </>
   );

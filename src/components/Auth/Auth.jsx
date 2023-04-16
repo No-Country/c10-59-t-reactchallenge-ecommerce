@@ -10,6 +10,7 @@ const Auth = () => {
 
   return (
 <div className="auth__container">
+
   <h2 className='auth__title'>Acceso a cuenta</h2>
 <div className="auth__links">
 <Link to="/login"><button>INICIAR SESIÓN</button></Link>
