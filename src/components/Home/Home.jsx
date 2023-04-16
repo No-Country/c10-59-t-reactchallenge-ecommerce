@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../NavBar/Nav'
 import Carousel from '../Carousel/Carousel'
 import ProductListContainer from '../List/ProductListContainer/ProductListContainer'
 import Nav2 from '../Nav2/Nav2'
@@ -8,7 +7,7 @@ const Home = () => {
     <div>
     <Nav2/>
         <Carousel/>
-        <ProductListContainer/>
+        {/* <ProductListContainer/> */}
     </div>
   )
 }

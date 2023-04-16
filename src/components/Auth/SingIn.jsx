@@ -17,16 +17,13 @@ const SingIn = () => {
             emailRef.current.value,
             passwordRef.current.value
           );
-          console.log(auth.currentUser);
+          
+          console.log(response.user);
         } catch (error) {
           console.log(error);
         }
       }
     
-      // const handleSignOut = () => {
-      // signOut(auth);
-      // };
-
     
   return (
     <div className='form__app'>

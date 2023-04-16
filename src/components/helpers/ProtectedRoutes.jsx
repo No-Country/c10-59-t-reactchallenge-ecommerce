@@ -7,23 +7,19 @@ import { useState } from 'react'
 import { CartItem } from '../Cart/CartItem/CartItem'
 
 const ProtectedRoutes = () => {
-    const User = useSelector(state => state.User)
 
-    // const [Isloggedgoogle, setIsloggedgoogle] = useState(false)
+  const User = useSelector(state => state.User)
 
-    useEffect(() => {
-   
+  console.log(User);
 
 
-    }, [User])
     
-   const navigate = useNavigate()
-
-    if(User.email) {
-       navigate("/cart")
-    } else {
-      return <Navigate to='/auth' />
-    }
+  //  console.log(auth.currentUser);
+  //   if(User) {
+  //     return <Outlet/>
+  //   } else {
+  //     return <Navigate to='/auth' />
+  //   }
 }
 
 export default ProtectedRoutes

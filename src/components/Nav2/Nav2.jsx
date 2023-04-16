@@ -3,20 +3,34 @@ import "../Nav2/nav.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import close from "../../assets/iconos/icon-red-cross.svg";
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from "react-burger-menu";
+import NavMenu from "./NavMenu";
+
 
 const Nav2 = () => {
-  
+  const [isopen, setIsopen] = useState(false);
 
-
-    return (
-        <Menu left>
-        
-          <Link className="menu-item" to="/products">Product</Link>
-          <Link id="about" className="menu-item" to="/credit">Metodo de pago</Link>
-          <Link id="contact" className="menu-item" to="/auth">Auth</Link>
-        </Menu>
-      );
+  return (
+    <>
+      {isopen == true ? (
+        <div className="menu__container">
+          <div className="menu__nav">
+            <div></div>
+            <h2 className="nav__title">Menu</h2>
+            <img className="nav__close" src={close} alt="close" onClick={() => setIsopen(false)} />
+              
+            
+          </div>
+          <NavMenu isopen={isopen} />
+        </div>
+      ) : (
+        <AiOutlineMenu
+          className="Menu__hamburguer"
+          onClick={() => setIsopen(true)}
+        />
+      )}
+    </>
+  );
 };
 
 export default Nav2;

@@ -121,6 +121,7 @@ line-height: 17px;
 
 .auth__links a {
   all: unset;
+  font-family: "Archivo", sans-serif;
 
   font-weight: 700;
   font-style: normal;
@@ -134,6 +135,7 @@ line-height: 17px;
   background: #fefefe;
   border: 2.6px solid #1f1f1f;
   box-shadow: 2.6px 2.6px 0px #1f1f1f;
+  margin-top: 2rem;
 }
 
 .auth__google-btn .g-icon {
@@ -141,9 +143,7 @@ line-height: 17px;
   height: 30px;
 }
 
-.auth__links button:nth-child(3) {
-  margin-top: 28px;
-}
+
 
 
 .division {

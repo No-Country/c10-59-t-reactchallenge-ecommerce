@@ -27,13 +27,11 @@ const AuthGoogle = () => {
         email: user?.email,
         photo: user?.photoURL
       }
-      console.log(usuarios);
 
       dispatch(setUserAuth(usuarios))
     }, [user]);
     
     
-  
 
 
   return (
