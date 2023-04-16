@@ -1,48 +1,81 @@
 h2 {
-  width: 100%;
-  left: 0;
-  top: -60px;
-  text-align: center;
+  width: 155px;
+  height: 47px;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 10px;
+  font-weight: 700;
 }
-
-/*
- .descripcion{
-     background-color: #FFFF;
-     display: flex;
-     justify-content: space-between;
-     padding: 5px 30px 5px 35px;
-     position: fixed !important;
-     align-items:center;
-     color: #1DBEB4; 
-     top: 0;
-     z-index: 999;
-     width: 100vw;
-     flex-flow: row wrap;
- }
- */
 
 .texto-descripcion {
-  font-style: italic;
+  background-color: #FDFD96;
+  font-style: normal;
   font-weight: 300;
   font-size: 20px;
-  margin-bottom: 0;
-  align-self: center;
-  margin-top: 20px;
+  width: 400px;
+  height: 300px;
+  
+  margin: 0 0 30px 10px;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
 }
 
-.desc-detalle {
-  padding: 8px 30px;
-  font-size: 14px;
-  text-align: left;
-  justify-content: space-between;
+img {
+  width: 280px;
+  height: 260px;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
+  margin-top: -385px;
+  margin-left: 150px;
 }
 
-.descripcion h2 {
-  margin-left: 20px;
+.desc-recomendacion h3{
+  width: 300px;
+  height: 47px;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 10px;
+}
+
+.texto-recomendacion {
+  width: 300px;
+  height: 90px;
+  background-color: #FDFD96;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 10px;
+}
+
+.counter {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border: px solid #000000;
 }
 
 .desc-compra {
-  color: antiquewhite;
+  background-color: #FFFF00;
+  color: #000000;
   font-weight: bold;
-  font-size: 1em;
+  width: 200px;
+  height: 47px;
+  box-shadow: 2px 4px 0px #000000;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content:space-between;
+  margin: 0 0 30px 10px;
+  margin-top: -40px;
+  margin-left: 100px;
 }
+
