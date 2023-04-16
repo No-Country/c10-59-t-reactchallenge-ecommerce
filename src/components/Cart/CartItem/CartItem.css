@@ -3,19 +3,33 @@
     width: 90%;
     margin: auto;
     display: grid;
-    padding: 5px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5em;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 1em;
     margin-bottom: 2em;
     border: 3px solid #000000;
     box-shadow: 2px 4px 0px #000000;
 }
 
-.cart-item-container img {
-    width: 100%;
+
+.cart-item-desc {
+    margin-left: 12px;
 }
 
-.cart-item-desc p, 
+.cart-item-desc div:last-child {
+    display: flex;
+}
+
+.cart-item-desc p {
+    margin: 0;
+}
+
+.cart-item-desc hr {
+    margin: 0 0 5px;
+    border: 1px solid black;
+    opacity: 1;
+    width: 80%;
+}
+
 .cart-item-total p:first-child {
     margin-bottom: 5px;
 }

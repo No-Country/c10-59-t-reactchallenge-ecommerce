@@ -1,0 +1,23 @@
+.nav-section-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.nav-section-container img {
+    cursor: pointer;
+}
+
+.nav-section-title  {
+    width: 100%;
+}
+
+.nav-section-title h2 {
+    font-weight: bold;
+    font-size: 1.7em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
