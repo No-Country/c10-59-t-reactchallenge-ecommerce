@@ -8,7 +8,7 @@ const Home = () => {
     <div>
     <Nav2/>
         <Carousel/>
-        <ProductListContainer/>
+        <ProductListContainer isHome={true}/>
     </div>
   )
 }
