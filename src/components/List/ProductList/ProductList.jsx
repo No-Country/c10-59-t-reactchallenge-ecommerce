@@ -12,7 +12,7 @@ const ProductList = ({ type }) => {
         snap: true,
         gap: "2.1em",
         perPage: 2,
-      }
+    }
 
     return(
         <div className="product-list-container">

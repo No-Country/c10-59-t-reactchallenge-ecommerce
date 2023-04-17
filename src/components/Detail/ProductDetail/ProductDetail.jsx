@@ -26,7 +26,7 @@ const ProductDetail = ({ product }) => {
         </div>
         <div className="desc-compra">
             <CartItemCounter/>
-            <button className="desc-btn-add">AGREGAR</button>
+            <button className="desc-btn-add">{`AGREGAR $${product.price}`}</button>
         </div>
     </>
   );
