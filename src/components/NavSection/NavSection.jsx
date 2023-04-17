@@ -2,7 +2,7 @@ import "./NavSection.css";
 import { useNavigate } from "react-router";
 import SVG from "../../assets/iconos/back-yellow.svg"
 
-const NavSection = ({ title }) => {
+const NavSection = ({ title, category }) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -10,7 +10,7 @@ const NavSection = ({ title }) => {
   }
 
   return (
-    <div className="nav-section-container">
+    <div className={`nav-section-container ${category && `nav-section-container-${category}`}`}>
       <img src={SVG} onClick={goBack}/>
       <div className="nav-section-title">
         <h2>{title}</h2>

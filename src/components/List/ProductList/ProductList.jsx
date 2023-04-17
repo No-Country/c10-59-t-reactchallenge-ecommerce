@@ -3,7 +3,7 @@ import Product from "../Product/Product";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
-const ProductList = ({ type, isHome }) => {
+const ProductList = ({ type }) => {
 
     const splideOptions = {
         type: "loop",

@@ -3,10 +3,39 @@
     align-items: center;
     margin-bottom: 20px;
     padding: 15px;
+    border: 1px solid #000000;
+    color: #000000;
+    position: relative;
+}
+
+/* specific styles */
+
+.nav-section-container-ipa {
+    background-color: #34A853;
+}
+
+.nav-section-container-negra {
+    background-color: #000000;
+}
+
+.nav-section-container-rubia {
+    background-color: #FDFD96;
+    color: #000000;
+}
+
+.nav-section-container-roja {
+    background-color: #9B292F;
+}
+
+.nav-section-container-ipa,
+.nav-section-container-negra,
+.nav-section-container-roja {
+    color: #FFFFFF;
 }
 
 .nav-section-container img {
     cursor: pointer;
+    position: absolute;
 }
 
 .nav-section-title  {
@@ -16,8 +45,6 @@
 .nav-section-title h2 {
     font-weight: bold;
     font-size: 1.7em;
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }

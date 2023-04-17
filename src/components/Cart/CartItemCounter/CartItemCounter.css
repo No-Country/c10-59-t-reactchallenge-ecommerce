@@ -23,8 +23,10 @@
 
 .cart-counter-container button:first-child {
     border-right: 2px solid black;
+    height: 100%;
 }
 
 .cart-counter-container button:last-child {
     border-left: 2px solid black;
+    height: 100%;
 }
