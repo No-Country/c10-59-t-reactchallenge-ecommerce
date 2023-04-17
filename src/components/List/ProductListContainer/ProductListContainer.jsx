@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../../utils/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import ProductList from "../ProductList/ProductList";
-import Loading from "../../helpers/Loading";
+
 
 const ProductListContainer = () => {   
     const [types, setTypes] = useState([]);
@@ -46,7 +46,7 @@ const ProductListContainer = () => {
     }, []);
 
     return(
-        types.length === 0 ? <Loading/> : types.map(type => {
+        types.length === 0 ? <h2>Cargando</h2> : types.map(type => {
             return <ProductList key={type.id} type={type}/>
         })
     )

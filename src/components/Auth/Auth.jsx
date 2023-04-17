@@ -2,6 +2,7 @@ import React from 'react'
 import AuthGoogle from './AuthGoogle';
 
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import NavSection from '../NavSection/NavSection';
 
 
 

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "../Nav2/nav.css";
 
 import { Link } from "react-router-dom";
-import close from "../../assets/iconos/icon-red-cross.svg";
-import { slide as Menu } from "react-burger-menu";
+import Closebtn from "../../assets/iconos/icon-red-cross.svg";
 import NavMenu from "./NavMenu";
 import Menuhambur from '../../assets/iconos/Menusvg.svg'
 
@@ -18,8 +17,7 @@ const Nav2 = () => {
           <div className="menu__nav">
             <div></div>
             <h2 className="nav__title">Menu</h2>
-            <img className="nav__close" src={close} alt="close" onClick={() => setIsopen(false)} />
-              
+            <img className="nav__close" src={Closebtn} alt="close" onClick={() => setIsopen(false)} />
             
           </div>
           <NavMenu isopen={isopen} />
