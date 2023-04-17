@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { db } from "../../../utils/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, query, where, limit } from "firebase/firestore";
 import ProductList from "../ProductList/ProductList";
 
-
-const ProductListContainer = () => {   
+const ProductListContainer = ({ isHome }) => {   
     const [types, setTypes] = useState([]);
 
     useEffect(() => {
@@ -16,38 +15,57 @@ const ProductListContainer = () => {
                 
                 const data = [];
 
+                const homeData = [
+                    {name: "PARA VOS", id: "paravos", products: []},
+                    {name: "OFERTAS", id: "ofertas", products: []}
+                ];
+
                 for (const typeDoc of typesDocs) {
-                    const typeData = typeDoc.data();
                     const productsCollection = collection(typeDoc.ref, "products");
                     const productsSnapshot = await getDocs(productsCollection);
 
-                    const productsData = [];
+                    if (isHome) {     
+                        const queryProducts = await getDocs(query(productsCollection, limit(2)));                             
+                        const queryPromo = query(productsCollection, where("isPromo", "==", true));
+                        const queryPromoSnapshot = await getDocs(queryPromo);
 
-                    productsSnapshot.forEach(productDoc => {
-                        productsData.push({...productDoc.data(), id: productDoc.id});
-                    });
+                        queryProducts.forEach(productDoc => {
+                            homeData[0].products.push({...productDoc.data(), id: productDoc.id});
+                        });
 
-                    data.push({
-                        ...typeData,
-                        id: typeDoc.id,
-                        products: productsData
-                    });
+                        queryPromoSnapshot.forEach(productDoc => {
+                            homeData[1].products.push({...productDoc.data(), id: productDoc.id});
+                        });
+                    } else {
+                        const productsData = [];
+
+                        productsSnapshot.forEach(productDoc => {
+                            productsData.push({...productDoc.data(), id: productDoc.id});
+                        });
+
+                        data.push({
+                            ...typeDoc.data(),
+                            id: typeDoc.id,
+                            products: productsData
+                        });
+                    }
+   
                 }
-
-                setTypes(data);
+      
+                isHome ? setTypes(homeData) : setTypes(data);
                 
             } catch (err) {
                 console.log(err);
             }
         }
+
         getData(); 
         
-       
     }, []);
 
     return(
-        types.length === 0 ? <h2>Cargando</h2> : types.map(type => {
-            return <ProductList key={type.id} type={type}/>
+        types.length === 0 ? <p>Sin productos</p> : types.map(type => {
+            return <ProductList key={type.id} type={type} isHome={isHome}/>
         })
     )
 }

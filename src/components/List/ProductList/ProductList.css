@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 0 30px 10px;
+  color: #ffffff;
 }
 
 .product-list-title h3 {
@@ -25,6 +26,7 @@
 
 .rubia {
   background-color: #fdfd96;
+  color: #000000;
 }
 
 .negra {
@@ -35,10 +37,12 @@
   background-color: #9b292f;
 }
 
-.ipa,
-.negra,
-.roja {
-  color: #ffffff;
+.ofertas {
+  background-color: #D3A5F7;
+}
+
+.paravos {
+  background-color: #FF2AAC;;
 }
 
 .splide__arrow,
