@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Auth from "./components/Auth/Auth";
 import Home from "./components/Home/Home"
-import { CardFormContainer } from "./components/Card/CardFormContainer/CardFormContainer";
+import CardFormContainer from "./components/Card/CardFormContainer/CardFormContainer";
 import ProductListContainer from "./components/List/ProductListContainer/ProductListContainer";
 import ProductDetailContainer from "./components/Detail/ProductDetailContainer/ProductDetailContainer";
 import CartContainer from "./components/Cart/CartContainer/CartContainer";

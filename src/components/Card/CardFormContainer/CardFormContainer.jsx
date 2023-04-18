@@ -3,7 +3,7 @@ import { useState } from "react";
 import Cards from "react-credit-cards-2";
 import 'react-credit-cards-2/dist/es/styles-compiled.css'
 
-export const CardFormContainer = () => {
+const CardFormContainer = () => {
     const [cardValues, setCardValues] = useState({
         number: "",
         expiry: "",
@@ -63,3 +63,5 @@ export const CardFormContainer = () => {
     </>
   );
 }
+
+export default CardFormContainer;

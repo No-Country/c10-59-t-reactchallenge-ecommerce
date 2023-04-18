@@ -33,22 +33,3 @@ const ProductDetail = ({ product }) => {
 
 }
 export default ProductDetail;
-
-
-{/* <div className="descripcion">         
-            <p className="texto-descripcion">{product.description}</p>
-            <img className="product-image" src={product.img} alt="#"/>
-            <div className="desc-recomendacion">
-                <h3>Para disfrutar con:</h3>
-                <p className="texto-recomendacion">{product.recommendation}</p>
-            </div>
-            <div className="counter">
-                <CartItemCounter />
-            </div>
-            <div>
-                <Button className="desc-compra">
-                    Agregar
-                    <p>{product.price}</p>
-                </Button>
-            </div>
-        </div> */}

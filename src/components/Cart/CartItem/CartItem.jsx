@@ -1,6 +1,6 @@
 import "./CartItem.css";
 import { CartItemCounter } from "../CartItemCounter/CartItemCounter";
-import Svg from "../../../assets/iconos/icon-red-cross.svg"
+import redCross from "../../../assets/iconos/icon-red-cross.svg"
 
 export const CartItem = () => {
   return (
@@ -16,7 +16,7 @@ export const CartItem = () => {
             <p>Total</p>
             <p>$1500</p>
         </div>
-        <img src={Svg} alt="" />
+        <img src={redCross} alt="" />
     </div>
   );
 }

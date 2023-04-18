@@ -15,8 +15,9 @@ const CarouselProducts = () => {
         type: "loop",
         perPage: 2,
         focus: "center",
-        gap: "-100px"
-
+        gap: "-100px",
+        pagination: false,
+        arrows: false
     }
 
   return (

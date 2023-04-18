@@ -12,6 +12,8 @@ const ProductList = ({ type }) => {
         snap: true,
         gap: "2.1em",
         perPage: 2,
+        arrows: false,
+        pagination: false
     }
 
     return(
