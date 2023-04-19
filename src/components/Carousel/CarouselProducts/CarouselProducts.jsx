@@ -12,6 +12,7 @@ const CarouselProducts = () => {
     ];
 
     const splideOptions = {
+        drag: "free",
         type: "loop",
         perPage: 2,
         focus: "center",
