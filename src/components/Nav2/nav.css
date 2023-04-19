@@ -2,8 +2,41 @@
   width: 95%;
   height: 92%;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 500;
   transition: all 1s ease-out;
+}
+
+.navbar__container {
+  width: 100%;
+   display: flex;
+  align-items: center; 
+  
+  text-align: center;
+} 
+
+.navbar__container h2{
+font-family: 'Archivo', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 41px;
+margin: auto;
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.1px;
+}
+
+
+
+.cart__icon {
+  width: 34px;
+  height: 34px;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .Menu__hamburguer {
@@ -13,7 +46,7 @@
   margin: 1rem;
   cursor: pointer;
   transition: all 0.2s linear;
-  position: absolute;
+  /* position: absolute; */
   z-index: 100;
 }
 
