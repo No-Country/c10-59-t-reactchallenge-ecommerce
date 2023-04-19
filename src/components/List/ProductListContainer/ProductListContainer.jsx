@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../../utils/firebase";
 import { getDocs, collection, query, where, limit } from "firebase/firestore";
 import ProductList from "../ProductList/ProductList";
+import CartNav from "../../Cart/CartNav/CartNav";
 
 const ProductListContainer = ({ isHome }) => {   
     const [types, setTypes] = useState([]);
@@ -64,10 +65,16 @@ const ProductListContainer = ({ isHome }) => {
     }, []);
 
     return(
-        types.length === 0 ? <p>Sin productos</p> : types.map(type => {
-            return <ProductList key={type.id} type={type} isHome={isHome}/>
-        })
-    )
+        types.length === 0 ? <p>Sin productos</p> :
+        <>
+            {
+                types.map(type => {
+                    return <ProductList key={type.id} type={type} isHome={isHome}/>
+                }) 
+            } 
+            <CartNav/>
+        </>
+    );
 }
 
 export default ProductListContainer;

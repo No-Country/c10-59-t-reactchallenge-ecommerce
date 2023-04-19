@@ -2,8 +2,7 @@ import "./CartContainer.css";
 import { CartItem } from "../CartItem/CartItem";
 import NavSection from '../../NavSection/NavSection';
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
+import CartNav from "../CartNav/CartNav";
 
 const CartContainer = () => {
     const { cartList } = useSelector(state => state.Cart);
@@ -17,7 +16,7 @@ const CartContainer = () => {
                     <p>No tienes productos</p>
                 }
             </div>
-            <button ><Link to="/pedidos">Pedidos</Link></button>
+            <CartNav isCart={true}/>
         </>
     );
 }
