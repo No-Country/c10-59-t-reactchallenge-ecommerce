@@ -7,8 +7,14 @@ import "../Auth/auth.css"
 import { useDispatch } from 'react-redux';
 import { setUserAuth } from '../../store/slices/userAuth.slice';
 import { FcGoogle } from 'react-icons/fc'
+import { useNavigate } from 'react-router';
+import CardEncantado from '../helpers/CardEncantado';
 
-const AuthGoogle = () => {
+const AuthGoogle = ({setLoading}) => {
+
+  const navigate = useNavigate()
+
+  
 
   const dispatch = useDispatch()
 
@@ -17,15 +23,16 @@ const AuthGoogle = () => {
     const googleAuth = new GoogleAuthProvider();
     const login = async () => {
       const result = await signInWithPopup(auth, googleAuth);
-    };
-    
+      setLoading(true)
+    }
     
     useEffect(() => {
       
       const usuarios = {
         username: user?.displayName,
         email: user?.email,
-        photo: user?.photoURL
+        photo: user?.photoURL,
+        uid: user?.uid
       }
 
       dispatch(setUserAuth(usuarios))
@@ -36,11 +43,12 @@ const AuthGoogle = () => {
 
   return (
     <>
+     <button onClick={login} className='auth__google-btn'>
+      <FcGoogle className='g-icon' />
     
-<button onClick={login} className='auth__google-btn'>
-  <FcGoogle className='g-icon' />
+    </button>
+  
 
-</button>
     
   </>
   )

@@ -5,21 +5,21 @@ import { Navigate, Outlet, useNavigate } from 'react-router'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { CartItem } from '../Cart/CartItem/CartItem'
+import Home from '../Home/Home'
 
 const ProtectedRoutes = () => {
 
   const User = useSelector(state => state.User)
 
-  console.log(User);
+  console.log(User?.uid);
 
 
     
-  //  console.log(auth.currentUser);
-  //   if(User) {
-  //     return <Outlet/>
-  //   } else {
-  //     return <Navigate to='/auth' />
-  //   }
+    if(User) {
+    return  <Outlet />
+    } else {
+       return <Navigate to='/auth' />
+     }
 }
 
 export default ProtectedRoutes

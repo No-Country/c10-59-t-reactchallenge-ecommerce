@@ -9,6 +9,7 @@ import SingIn from "./components/Auth/SingIn";
 import Signup from "./components/Auth/Signup";
 import Pedidos from "./components/Pedidos/Pedidos";
 import CardGranCompra from "./components/helpers/CardGranCompra";
+import ProtectedRoutes from "./components/helpers/ProtectedRoutes";
 
 function App() {
   return (
@@ -21,10 +22,14 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/product/:type/:productId" element={<ProductDetailContainer/>} />
           <Route path="/products" element={<ProductListContainer />} />
-          <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
+
+          <Route element={<ProtectedRoutes/>}>
+          <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/pedidos" element={<Pedidos/>} />
           <Route path="/gracias" element={<CardGranCompra/>}/>
+
+          </Route>
         </Routes>
       </div> 
     </>

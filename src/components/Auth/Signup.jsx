@@ -2,9 +2,10 @@ import React from 'react'
 import { useRef } from 'react';
 import { auth } from '../../utils/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router';
 
 const Signup = () => {
-
+const navigate = useNavigate()
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const SignupRegister = async e => {
@@ -15,6 +16,7 @@ const Signup = () => {
         emailRef.current.value,
         passwordRef.current.value
       );
+      navigate("/")
       console.log(response.user);
     } catch (error) {
       console.log(error);

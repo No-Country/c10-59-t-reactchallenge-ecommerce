@@ -4,21 +4,24 @@ import { useRef } from 'react';
 import { auth } from '../../utils/firebase';
 import AuthGoogle from './AuthGoogle';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 const SingIn = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
+  const navigate = useNavigate()
+
     const SignInLogin = async e => {
-        try {
+        try  {
           e.preventDefault();
           const response = await signInWithEmailAndPassword(
             auth,
             emailRef.current.value,
             passwordRef.current.value
           );
-          
-          console.log(response.user);
+          navigate("/")
+          // console.log(response.user);
         } catch (error) {
           console.log(error);
         }
