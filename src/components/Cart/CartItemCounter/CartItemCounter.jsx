@@ -1,16 +1,15 @@
 import "./CartItemCounter.css";
 
-export const CartItemCounter = ({ counter, setCounter }) => {
-   
+const CartItemCounter = ({ counter, setCounter }) => {
   const increase = () => {
     setCounter(counter + 1);
-  }
+  };
 
   const decrease = () => {
-    if(!(counter === 1)) {
+    if (!(counter === 1)) {
       setCounter(counter - 1);
     }
-  }
+  };
 
   return (
     <div className="cart-counter-container">
@@ -19,4 +18,6 @@ export const CartItemCounter = ({ counter, setCounter }) => {
       <button onClick={increase}>+</button>
     </div>
   );
-}
+};
+
+export default CartItemCounter;
