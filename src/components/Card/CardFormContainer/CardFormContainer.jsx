@@ -2,6 +2,7 @@ import "./CardFormContainer.css";
 import { useState } from "react";
 import Cards from "react-credit-cards-2";
 import 'react-credit-cards-2/dist/es/styles-compiled.css'
+import { Link } from "react-router-dom";
 
 const CardFormContainer = () => {
     const [cardValues, setCardValues] = useState({
@@ -58,7 +59,7 @@ const CardFormContainer = () => {
                 <input name="cvc" type="tel" placeholder="CVC" maxLength={3}  onChange={handleChange} onFocus={handleFocus}/>
               </div>
             </div>
-            <button type="submit">Guardar</button>
+            <Link to="/gracias"><button type="submit">Pagar</button></Link>
         </form>
     </>
   );

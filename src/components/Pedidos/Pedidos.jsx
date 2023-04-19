@@ -2,6 +2,7 @@ import React from 'react'
 import "../Pedidos/Pedidos.css"
 import { useSelector } from 'react-redux';
 import { getTotalPrice } from "../../store/slices/cartList.slice";
+import { Link } from 'react-router-dom';
 
 const Pedidos = () => {
   const total = useSelector(getTotalPrice) 
@@ -44,8 +45,8 @@ const Pedidos = () => {
             <span className='total__monto'>${total}</span>
         </div>
     </div>
-        <button className='pedidos__btn'>PEDIR</button>
-   </div>
+    
+<Link to="/credit"><button className='pedidos__btn'>PEDIR</button></Link>   </div>
   )
 }
 
