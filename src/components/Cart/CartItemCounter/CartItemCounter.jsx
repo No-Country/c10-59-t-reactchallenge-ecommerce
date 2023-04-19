@@ -1,15 +1,13 @@
 import "./CartItemCounter.css";
-import { useState } from "react";
 
-export const CartItemCounter = () => {
-  const [counter, setCounter] = useState(0);
-
+export const CartItemCounter = ({ counter, setCounter }) => {
+   
   const increase = () => {
     setCounter(counter + 1);
   }
 
   const decrease = () => {
-    if(!(counter === 0)) {
+    if(!(counter === 1)) {
       setCounter(counter - 1);
     }
   }

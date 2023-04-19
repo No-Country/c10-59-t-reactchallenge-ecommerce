@@ -1,22 +1,27 @@
 import "./CartItem.css";
 import { CartItemCounter } from "../CartItemCounter/CartItemCounter";
 import redCross from "../../../assets/iconos/icon-red-cross.svg"
+import { deleteProduct } from "../../../store/slices/cartList.slice";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
-export const CartItem = () => {
+export const CartItem = ({ product }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="cart-item-container">
         <div className="cart-item-desc">
-            <p>Rabieta IPA</p>
+            <p>{product.name}</p>
             <hr />
             <div>
-              <CartItemCounter/>
+              <p>Cantidad: <span>{product.quantity}</span></p>
             </div>
         </div>
         <div className="cart-item-total">
             <p>Total</p>
-            <p>$1500</p>
+            <p>${product.price * product.quantity}</p>
         </div>
-        <img src={redCross} alt="" />
+        <img src={redCross} onClick={() => dispatch(deleteProduct(product))} alt="detele" />
     </div>
   );
 }

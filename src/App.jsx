@@ -7,6 +7,7 @@ import ProductDetailContainer from "./components/Detail/ProductDetailContainer/P
 import CartContainer from "./components/Cart/CartContainer/CartContainer";
 import SingIn from "./components/Auth/SingIn";
 import Signup from "./components/Auth/Signup";
+import Pedidos from "./components/Pedidos/Pedidos";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/products" element={<ProductListContainer />} />
           <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
+          <Route path="/pedidos" element={<Pedidos/>} />
         </Routes>
       </div> 
     </>
