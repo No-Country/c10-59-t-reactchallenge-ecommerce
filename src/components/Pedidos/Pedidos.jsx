@@ -1,8 +1,11 @@
 import React from 'react'
 import "../Pedidos/Pedidos.css"
-
+import { useSelector } from 'react-redux';
+import { getTotalPrice } from "../../store/slices/cartList.slice";
 
 const Pedidos = () => {
+  const total = useSelector(getTotalPrice) 
+
   return (
    <div className="pedidos__container">
     <div className="input">
@@ -38,7 +41,7 @@ const Pedidos = () => {
         <div className='line'/>
         <div className="total">
             <span className='total__title'>Total</span>
-            <span className='total__monto'>$1150</span>
+            <span className='total__monto'>${total}</span>
         </div>
     </div>
         <button className='pedidos__btn'>PEDIR</button>
@@ -46,4 +49,4 @@ const Pedidos = () => {
   )
 }
 
-export default Pedidos
+export default Pedidos;

@@ -1,9 +1,20 @@
 import { CartItemCounter } from "../../Cart/CartItemCounter/CartItemCounter";
 import "./ProductDetail.css";
 import NavSection from "../../NavSection/NavSection";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../../store/slices/cartList.slice";
+import { useState } from "react";
 
 const ProductDetail = ({ product }) => {
+ const [counter, setCounter] = useState(1);
 
+ const dispatch = useDispatch(); 
+
+ const handleClick = () => {
+    const newProduct = {...product, quantity: counter}
+    dispatch(addProduct(newProduct));
+ }
+ 
  return (
     <>
         <NavSection title={product.name} category={product.category}/>
@@ -25,11 +36,12 @@ const ProductDetail = ({ product }) => {
             </div>
         </div>
         <div className="desc-compra">
-            <CartItemCounter/>
-            <button className="desc-btn-add">{`AGREGAR $${product.price}`}</button>
+            <CartItemCounter setCounter={setCounter} counter={counter}/>
+            <button onClick={handleClick} className="desc-btn-add">{`AGREGAR $${product.price * counter}`}</button>
         </div>
     </>
   );
 
 }
+
 export default ProductDetail;
