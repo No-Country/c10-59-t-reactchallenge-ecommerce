@@ -5,11 +5,16 @@
                     
 
 -------------
+<br>
+
 >  #### Stack:
 Figma/ Illustrator/ Photoshop/ Design Thinking
 React + Vite/ Splide
 
 -------------
+
+<br>
+
 #### Creadores:
 **Nahuel Cordoba** > UX/UI Designer
 
@@ -22,6 +27,8 @@ React + Vite/ Splide
 **Silvia Ratero** > Frontend
 
 **Lara Minaverry** > Frontend
+
+<br>
 
 -------------
 
