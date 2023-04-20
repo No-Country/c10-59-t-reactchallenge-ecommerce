@@ -1,11 +1,10 @@
-import { signOut } from 'firebase/auth'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { auth } from '../../utils/firebase'
+import { signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
+import { auth } from "../../utils/firebase";
 import { useDispatch } from 'react-redux'
 import { setUserAuth } from '../../store/slices/userAuth.slice'
 
-const NavMenu = ({isopen}) => {
+const NavMenu = ({ isopen }) => {
 
   const dispatch = useDispatch()
   const HandleSingOut = () => {
@@ -17,15 +16,14 @@ const NavMenu = ({isopen}) => {
     <>
     
   <div className={`nav__items ${isopen && "open"}`}>
-  <Link>Tienda</Link>
-  <Link to="/credit">Credit</Link>
-  <Link to="/auth">auth</Link>
-  <Link>Menu</Link>
+  <Link to="/tienda">Tienda</Link>
+  <Link to="/pedidos">Pedidos</Link>
+  <Link to="/auth">Identificarse</Link>
+  <Link>Quienes Somos?</Link>
   <button onClick={HandleSingOut}>Cerrar Sesion</button>
   </div>
     </>
-  )
-}
+  );
+};
 
-
-export default NavMenu
+export default NavMenu;

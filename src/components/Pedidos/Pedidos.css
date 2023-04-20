@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+.detalles--map {
+    overflow: scroll;
+height: auto;
+}
+
 .pedidos__detalles {
     background: #FCFCBD;
     border: 3px solid #000000;
@@ -17,6 +22,7 @@ height: 174px;
 margin: 2rem 0;
 display: flex;
 flex-direction: column;
+
 }
 
 .input input {
@@ -81,7 +87,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 12px;
 margin: 4px 0;
-
 
 letter-spacing: 0.374px;
 }

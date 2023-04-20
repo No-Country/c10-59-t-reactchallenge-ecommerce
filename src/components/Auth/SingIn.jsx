@@ -6,9 +6,16 @@ import AuthGoogle from './AuthGoogle';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
+
+
+
+import NavSection from "../NavSection/NavSection";
+
 const SingIn = () => {
-    const emailRef = useRef(null);
-    const passwordRef = useRef(null);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+
+ 
 
   const navigate = useNavigate()
 
@@ -29,40 +36,36 @@ const SingIn = () => {
     
     
   return (
-    <div className='form__app'>
-        
-  <form action="" className='form__form'>
-  <h1 className='form__title'>Iniciar Sesión</h1>
-  <div className="form__inputs">
-   <div className='div__form'>
-   <span className='form__imput-title'> Email</span>
-  <input className='form__input' ref={emailRef} type="email" placeholder="Correo" />
-   </div>
-  <div>
-  <span className='form__imput-title'>Contraseña</span>
-  <input className='form__input' ref={passwordRef} type="password" placeholder='Contraseña' />
-  </div>
-  </div>
+    <>
+      <NavSection title="Iniciar sesión" />
+      <div className="form__app">
+        <form action="" className="form__form">
+          <h1 className="form__title">Iniciar Sesión</h1>
+          <div className="form__inputs">
+            <div className="div__form">
+              <span className="form__imput-title"> Email</span>
+              <input className="form__input" ref={emailRef} type="email" placeholder="Correo" />
+            </div>
+            <div>
+              <span className="form__imput-title">Contraseña</span>
+              <input className="form__input" ref={passwordRef} type="password" placeholder="Contraseña" />
+            </div>
+          </div>
 
-  <button className='btn__auth' onClick={SignInLogin}>
-Inicia Sesion
-  </button>
+          <button className="btn__auth" onClick={SignInLogin}>
+            Inicia Sesion
+          </button>
 
-<div className='division'>
-<span className='line'></span>
-<span className='O'>O</span>
-<span className='line'></span>
-</div>
+          <div className="division">
+            <span className="line"></span>
+            <span className="O">O</span>
+            <span className="line"></span>
+          </div>
+          <AuthGoogle />
+        </form>
+      </div>
+    </>
+  );
+};
 
-  <AuthGoogle/>
- 
-</form>
-
-
-
-
-    </div>
-  )
-}
-
-export default SingIn
+export default SingIn;
