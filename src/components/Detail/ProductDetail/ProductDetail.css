@@ -37,8 +37,9 @@
   align-items: center;
   justify-items: center; 
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid #000000;
   margin: 0 auto;
+  position: relative;
 }
 
 .descripcion-container .product-image img{
