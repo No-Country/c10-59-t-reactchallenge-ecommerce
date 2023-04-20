@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Auth from "./components/Auth/Auth";
-import Home from "./components/Home/Home"
+import Home from "./pages/Home/Home";
+import Store from "./pages/Store/Store";
 import CardFormContainer from "./components/Card/CardFormContainer/CardFormContainer";
-import ProductListContainer from "./components/List/ProductListContainer/ProductListContainer";
 import ProductDetailContainer from "./components/Detail/ProductDetailContainer/ProductDetailContainer";
 import CartContainer from "./components/Cart/CartContainer/CartContainer";
 import SingIn from "./components/Auth/SingIn";
@@ -20,7 +20,7 @@ function App() {
           <Route path="/register" element={<Signup/>} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/product/:type/:productId" element={<ProductDetailContainer/>} />
-          <Route path="/products" element={<ProductListContainer />} />
+          <Route path="/tienda" element={<Store />} />
           <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
           <Route path="/pedidos" element={<Pedidos/>} />

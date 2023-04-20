@@ -1,80 +1,76 @@
-import { useState, useEffect } from "react";
 import { db } from "../../../utils/firebase";
 import { getDocs, collection, query, where, limit } from "firebase/firestore";
+import { useState, useEffect } from "react";
 import ProductList from "../ProductList/ProductList";
 import CartNav from "../../Cart/CartNav/CartNav";
 
-const ProductListContainer = ({ isHome }) => {   
-    const [types, setTypes] = useState([]);
+const ProductListContainer = ({ isHome }) => {
+  const [types, setTypes] = useState([]);
 
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const typesCollection = collection(db,"types");
-                const typesSnapshot  = await getDocs(typesCollection);
-                const typesDocs = typesSnapshot.docs;
-                
-                const data = [];
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const typesCollection = collection(db, "types");
+        const typesSnapshot = await getDocs(typesCollection);
+        const typesDocs = typesSnapshot.docs;
 
-                const homeData = [
-                    {name: "PARA VOS", id: "paravos", products: []},
-                    {name: "OFERTAS", id: "ofertas", products: []}
-                ];
+        const data = [];
 
-                for (const typeDoc of typesDocs) {
-                    const productsCollection = collection(typeDoc.ref, "products");
-                    const productsSnapshot = await getDocs(productsCollection);
+        const homeData = [
+          { name: "PARA VOS", id: "paravos", products: [] },
+          { name: "OFERTAS", id: "ofertas", products: [] },
+        ];
 
-                    if (isHome) {     
-                        const queryProducts = await getDocs(query(productsCollection, limit(2)));                             
-                        const queryPromo = query(productsCollection, where("isPromo", "==", true));
-                        const queryPromoSnapshot = await getDocs(queryPromo);
+        for (const typeDoc of typesDocs) {
+          const productsCollection = collection(typeDoc.ref, "products");
+          const productsSnapshot = await getDocs(productsCollection);
 
-                        queryProducts.forEach(productDoc => {
-                            homeData[0].products.push({...productDoc.data(), id: productDoc.id});
-                        });
+          if (isHome) {
+            const queryProducts = await getDocs(query(productsCollection, limit(2)));
+            const queryPromo = query(productsCollection, where("isPromo", "==", true));
+            const queryPromoSnapshot = await getDocs(queryPromo);
 
-                        queryPromoSnapshot.forEach(productDoc => {
-                            homeData[1].products.push({...productDoc.data(), id: productDoc.id});
-                        });
-                    } else {
-                        const productsData = [];
+            queryProducts.forEach((productDoc) => {
+              homeData[0].products.push({ ...productDoc.data(), id: productDoc.id });
+            });
 
-                        productsSnapshot.forEach(productDoc => {
-                            productsData.push({...productDoc.data(), id: productDoc.id});
-                        });
+            queryPromoSnapshot.forEach((productDoc) => {
+              homeData[1].products.push({ ...productDoc.data(), id: productDoc.id });
+            });
+          } else {
+            const productsData = [];
 
-                        data.push({
-                            ...typeDoc.data(),
-                            id: typeDoc.id,
-                            products: productsData
-                        });
-                    }
-   
-                }
-      
-                isHome ? setTypes(homeData) : setTypes(data);
-                
-            } catch (err) {
-                console.log(err);
-            }
+            productsSnapshot.forEach((productDoc) => {
+              productsData.push({ ...productDoc.data(), id: productDoc.id });
+            });
+
+            data.push({
+              ...typeDoc.data(),
+              id: typeDoc.id,
+              products: productsData,
+            });
+          }
         }
 
-        getData(); 
-        
-    }, []);
+        isHome ? setTypes(homeData) : setTypes(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-    return(
-        types.length === 0 ? <p>Sin productos</p> :
-        <>
-            {
-                types.map(type => {
-                    return <ProductList key={type.id} type={type} isHome={isHome}/>
-                }) 
-            } 
-            <CartNav/>
-        </>
-    );
-}
+    getData();
+  }, []);
+
+  return types.length === 0 ? (
+    <p>Sin productos</p>
+  ) : (
+    <>
+      {types.map((type) => {
+        return <ProductList key={type.id} type={type} isHome={isHome} />;
+      })}
+      <CartNav />
+    </>
+  );
+};
 
 export default ProductListContainer;

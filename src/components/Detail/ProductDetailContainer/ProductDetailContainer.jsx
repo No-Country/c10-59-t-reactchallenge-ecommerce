@@ -1,41 +1,35 @@
-import { useState } from "react";
-import { db } from "../../../utils/firebase"
+import { db } from "../../../utils/firebase";
+import { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../ProductDetail/ProductDetail";
 
 const ProductDetailContainer = () => {
+  const [product, setProduct] = useState({});
+  const { type, productId } = useParams();
 
-    const [product, setProduct] = useState({});
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const typeDoc = doc(db, "types", type);
+        const typeSnapshot = await getDoc(typeDoc);
+        const productDoc = doc(typeSnapshot.ref, "products", productId);
+        const productSnapshot = await getDoc(productDoc);
+        const data = {
+          ...productSnapshot.data(),
+          id: productSnapshot.id,
+        };
 
-    const { type, productId } = useParams();
+        setProduct(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const typeDoc = doc(db, "types", type);
-                const typeSnapshot = await getDoc(typeDoc);          
-                const productDoc = doc(typeSnapshot.ref, "products", productId);
-                const productSnapshot = await getDoc(productDoc);
-                const data = {
-                    ...productSnapshot.data(),
-                    id: productSnapshot.id
-                }
+    getData();
+  }, [type, productId]);
 
-                setProduct(data);
-            } catch (err) {
-                console.log(err)
-            }
-        }
-
-        getData();
-
-    }, [type, productId])
-
-  return (
-    <ProductDetail product={product}/>
-  )
-}
+  return <ProductDetail product={product} />;
+};
 
 export default ProductDetailContainer;
