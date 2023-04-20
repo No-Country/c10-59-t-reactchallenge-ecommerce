@@ -14,3 +14,29 @@
   object-fit: cover;
   object-position: 100% 10%;
 }
+
+@media screen and (min-width: 600px) {
+  .home-slider-container img {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .home-slider-container img {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .home-slider-container img {
+    height: 500px;
+  }
+}
+
+
+@media screen and (min-width: 1700px) {
+  .home-slider-container img {
+    height: 700px;
+    object-position: 100% 10%;
+  }
+}
