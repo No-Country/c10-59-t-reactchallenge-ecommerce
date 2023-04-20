@@ -1,14 +1,17 @@
+import "./Store.css";
 import ProductListContainer from "../../components/List/ProductListContainer/ProductListContainer";
 import CartNav from "../../components/Cart/CartNav/CartNav";
 import NavSection from "../../components/NavSection/NavSection";
 
 const Store = () => {
   return (
-    <div className="store-container">
+    <>
       <NavSection title="Tienda" />
-      <ProductListContainer />
+      <div className="store-container">
+        <ProductListContainer />
+      </div>
       <CartNav />
-    </div>
+    </>
   );
 };
 

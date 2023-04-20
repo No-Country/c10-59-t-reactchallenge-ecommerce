@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 30px 10px;
+  margin: 0 0 30px;
   color: #ffffff;
 }
 
@@ -43,4 +43,21 @@
 
 .paravos {
   background-color: #FF2AAC;;
+}
+
+@media screen and (min-width: 1300px) {
+  .product-list .splide {
+    margin: 0 auto;
+  }
+
+  .product-list-title {
+    width: 415px;
+    height: 70px;
+    box-shadow: none;
+    margin: 50px 0;
+  }
+
+  .product-list-title:hover {
+    box-shadow: 2px 4px 0px #000000;
+  }
 }

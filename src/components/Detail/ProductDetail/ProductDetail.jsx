@@ -30,8 +30,8 @@ const ProductDetail = ({ product }) => {
             <img src={product.img} alt="#" />
           </div>
         </div>
+        <h3 className={`detail-${product.category}`}>Para disfrutar con:</h3>
         <div className="desc-recomendacion">
-          <h3 className={`detail-${product.category}`}>Para disfrutar con:</h3>
           <p className="texto-recomendacion">{product.recommendation}</p>
         </div>
       </div>
