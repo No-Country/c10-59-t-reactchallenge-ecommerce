@@ -10,8 +10,8 @@
 }
 
 .detalles--map {
-    overflow: scroll;
-height: auto;
+    overflow: auto;
+height: 100px;
 }
 
 .pedidos__detalles {
