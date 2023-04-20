@@ -15,12 +15,18 @@ const CarouselProducts = () => {
     type: "loop",
     perPage: 2,
     focus: "center",
-    gap: "-400px",
+    gap: "-660px",
     pagination: false,
     arrows: false,
     breakpoints: {
-      1200: {
+      1100: {
         gap: "-100px"
+      },
+      1300: {
+        gap: "-200px"
+      },
+      1600: {
+        gap: "-200px"
       }
     }
   };
