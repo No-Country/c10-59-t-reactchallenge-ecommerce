@@ -55,9 +55,7 @@ const CardFormContainer = () => {
             <input name="cvc" type="tel" placeholder="CVC" maxLength={3} onChange={handleChange} onFocus={handleFocus} />
           </div>
         </div>
-        <Link to="/gracias">
-          <button type="submit">Pagar</button>
-        </Link>
+        <button type="submit"><Link to="/gracias">Pagar</Link></button>
       </form>
     </>
   );

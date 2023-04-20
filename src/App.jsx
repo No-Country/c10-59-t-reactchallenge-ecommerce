@@ -24,12 +24,12 @@ function App() {
           <Route path="/tienda" element={<Store />} />
           <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
+          <Route path="/testing" element={<CardFormContainer/>}/>
 
           <Route element={<ProtectedRoutes/>}>
           <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/pedidos" element={<Pedidos/>} />
           <Route path="/gracias" element={<CardGranCompra/>}/>
-
           </Route>
         </Routes>
       </div> 
