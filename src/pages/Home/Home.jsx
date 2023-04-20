@@ -8,8 +8,8 @@ import CartNav from "../../components/Cart/CartNav/CartNav";
 const Home = () => {
   return (
     <>
+      <NavBar/>
       <div className='home-container'>
-          <NavBar/>
           <CarouselHome/>
           <ProductListContainer isHome={true}/>
           <CarouselProducts/>
