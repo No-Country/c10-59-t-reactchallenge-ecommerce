@@ -9,7 +9,7 @@
 
 >  #### Stack:
 Figma/ Illustrator/ Photoshop/ Design Thinking
-React + Vite/ Splide
+React + Vite/ Splide/ Redux/ Firebase
 
 -------------
 
