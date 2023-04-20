@@ -4,6 +4,7 @@ import NavSection from "../../NavSection/NavSection";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../../store/slices/cartList.slice";
 import { useState } from "react";
+import Promo from "../../Promo/Promo";
 
 const ProductDetail = ({ product }) => {
   const [counter, setCounter] = useState(1);
@@ -28,6 +29,9 @@ const ProductDetail = ({ product }) => {
           </div>
           <div className="product-image">
             <img src={product.img} alt="#" />
+            {
+              product.isPromo && <Promo isDetail={true}/>
+            }
           </div>
         </div>
         <h3 className={`detail-${product.category}`}>Para disfrutar con:</h3>

@@ -5,24 +5,27 @@ import AuthGoogle from "./AuthGoogle";
 
 const Auth = () => {
   return (
-    <div className="auth__container">
-      <h2 className="auth__title">Acceso a cuenta</h2>
-      <div className="auth__links">
-        <Link to="/login">
-          <button>INICIAR SESIÓN</button>
-        </Link>
-        <Link to="/register">
-          <button>REGISTRARSE</button>
-        </Link>
-      </div>
+    <>
+      <NavSection title="Autenticación"/>
+      <div className="auth__container">
+        <h2 className="auth__title">Acceso a cuenta</h2>
+        <div className="auth__links">
+          <Link to="/login">
+            <button>INICIAR SESIÓN</button>
+          </Link>
+          <Link to="/register">
+            <button>REGISTRARSE</button>
+          </Link>
+        </div>
 
-      <div className="division">
-        <span className="line"></span>
-        <span className="O">O</span>
-        <span className="line"></span>
+        <div className="division">
+          <span className="line"></span>
+          <span className="O">O</span>
+          <span className="line"></span>
+        </div>
+        <AuthGoogle />
       </div>
-      <AuthGoogle />
-    </div>
+    </>
   );
 };
 export default Auth;

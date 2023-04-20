@@ -59,6 +59,13 @@ all: unset;
   animation-timing-function: cubic-bezier(0.42,0.17,0.75,0.83);
 }
 
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* Animations */
 @keyframes bump9 {
   from,

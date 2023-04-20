@@ -3,8 +3,9 @@ import { getDocs, collection, query, where, limit } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import ProductList from "../ProductList/ProductList";
 import CartNav from "../../Cart/CartNav/CartNav";
+import Loading from "../../helpers/Loading";
 
-const ProductListContainer = ({ isHome }) => {
+const ProductListContainer = ({ isHome, setLoading }) => {
   const [types, setTypes] = useState([]);
 
   useEffect(() => {
@@ -53,16 +54,20 @@ const ProductListContainer = ({ isHome }) => {
         }
 
         isHome ? setTypes(homeData) : setTypes(data);
+        types && setLoading(true);
+        
       } catch (err) {
         console.log(err);
       }
     };
 
     getData();
-  }, []);
+
+    
+  }, [types]);
 
   return types.length === 0 ? (
-    <p>Sin productos</p>
+    <Loading/>
   ) : (
     <>
       {types.map((type) => {

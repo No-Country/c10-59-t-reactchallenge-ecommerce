@@ -10,6 +10,7 @@ import Signup from "./components/Auth/Signup";
 import Pedidos from "./components/Pedidos/Pedidos";
 import CardGranCompra from "./components/helpers/CardGranCompra";
 import ProtectedRoutes from "./components/helpers/ProtectedRoutes";
+import Loading from "./components/helpers/Loading";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path="/tienda" element={<Store />} />
           <Route path="/credit" element={<CardFormContainer />} />
           <Route path="/cart" element={<CartContainer/>} />
-          <Route path="/testing" element={<CardFormContainer/>}/>
+          <Route path="/testing" element={<Loading/>}/>
 
           <Route element={<ProtectedRoutes/>}>
           <Route path="/credit" element={<CardFormContainer />} />
