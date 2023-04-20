@@ -9,21 +9,38 @@ const Pedidos = () => {
 
   const { cartList } = useSelector((state) => state.Cart);
 
+  
+
   return (
     <>
       <NavSection title="Pedido" />
       <div className="pedidos__container">
         <div className="input">
           <h2 className="input__title">Direcion de entrega</h2>
-          <input type="text" placeholder="Dirección de entrega" />
+          <input type="text" value="Buenos aires" placeholder="Dirección de entrega" />
         </div>
         <div className="input">
           <h2 className="input__title">Horario estimado</h2>
-          <input type="tel" placeholder="Horario" />
+          <input type="tel" value="13:00 pm" placeholder="Horario" />
         </div>
         <div className="input">
           <h2 className="input__title">Metodo de pago</h2>
-          <input type="text" placeholder="Metodo de pago" />
+         
+
+<select 
+name="Pagos" 
+id="pago-select" 
+className="pedidos-select"
+>
+    <option value="">--Elija una opción--</option>
+    <option value="perro">Visa</option>
+    <option value="gato">Zelle</option>
+    <option value="hamster">Paypal</option>
+    <option value="conejo">Mercado Pago</option>
+    <option value="caballo">Binance</option>
+    <option value="vaca">Zinli</option>
+
+</select>
         </div>
         <div className="pedidos__detalles">
           <h2 className="pedidos__detalles-title">Detalle</h2>
@@ -33,7 +50,8 @@ const Pedidos = () => {
         {
           cartList?.map(cartproduct => (
             <div className="detalle--span">
-            <span className="detalles__span"><span>{cartproduct.quantity}</span>{cartproduct.name}</span>
+            <span className="detalles__span">{cartproduct.name}</span>
+            <span className="total__span-detalles">Cantidad: {cartproduct.quantity}</span>
             
           </div>
           ))
