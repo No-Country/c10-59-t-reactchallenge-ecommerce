@@ -41,7 +41,7 @@
   }
 
 .slide-container img {
-    width: 100%;
+    width: 80%;
 }
 
 .carousel-products-btn {
@@ -61,6 +61,14 @@
   font-weight: bold;
 }
 
+
+@media screen and (min-width: 600px) {
+  .carousel-products-btn {
+    width: 250px;
+    margin: 80px auto 210px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .slide-container img {
     width: 300px;
@@ -72,7 +80,7 @@
     width: 415px;
     height: 70px;
     box-shadow: none;
-    margin: 70px 0;
+    margin: 100px 0;
   }
   
   .carousel-products-title:hover {
