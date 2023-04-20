@@ -1,13 +1,9 @@
-import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import React from 'react'
-import { useRef } from 'react';
-import { auth } from '../../utils/firebase';
-import AuthGoogle from './AuthGoogle';
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
-
-
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import React from "react";
+import { useRef } from "react";
+import { auth } from "../../utils/firebase";
+import AuthGoogle from "./AuthGoogle";
+import { useNavigate } from "react-router";
 
 import NavSection from "../NavSection/NavSection";
 
@@ -15,26 +11,19 @@ const SingIn = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
- 
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  const SignInLogin = async (e) => {
+    try {
+      e.preventDefault();
+      const response = await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value);
+      navigate("/");
+      // console.log(response.user);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-    const SignInLogin = async e => {
-        try  {
-          e.preventDefault();
-          const response = await signInWithEmailAndPassword(
-            auth,
-            emailRef.current.value,
-            passwordRef.current.value
-          );
-          navigate("/")
-          // console.log(response.user);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    
-    
   return (
     <>
       <NavSection title="Iniciar sesión" />
