@@ -8,8 +8,10 @@
 <br>
 
 >  #### Stack:
-Figma/ Illustrator/ Photoshop/ Design Thinking
 React + Vite/ Splide/ Redux/ Firebase
+
+Figma/ Illustrator/ Photoshop/ Design Thinking
+
 
 -------------
 
@@ -32,7 +34,7 @@ React + Vite/ Splide/ Redux/ Firebase
 
 -------------
 
-####Link al proyecto [link]
+#### Link al proyecto [https://c10-59-t-reactchallenge-ecommerce.vercel.app/]
 
 -------------
 

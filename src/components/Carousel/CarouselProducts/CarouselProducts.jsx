@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const CarouselProducts = () => {
   const imagesList = [
-    "https://firebasestorage.googleapis.com/v0/b/project-beer-ecommerce.appspot.com/o/carousel-products%2Fpampa-stout-black.png?alt=media&token=ffbdac69-f328-484f-913f-7e0d19d0d636",
-    "https://firebasestorage.googleapis.com/v0/b/project-beer-ecommerce.appspot.com/o/carousel-products%2Fpenon-de-aguila-red-waldbier.png?alt=media&token=00ea0755-6da4-4d49-8816-5c72e74b7b4d",
-    "https://firebasestorage.googleapis.com/v0/b/project-beer-ecommerce.appspot.com/o/carousel-products%2Fweidmann-negra_-schwarzbier.png?alt=media&token=996891fd-fb65-4545-85f3-c52ae7341ccf",
+    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fpampa-stout-black-removebg-preview%201.png?alt=media&token=beb7e899-c389-4505-a3bf-98e060fb2c44",
+    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fpenon-de-aguila-red-waldbier-removebg-preview%201.png?alt=media&token=cbb88d50-74e1-4ccf-8b61-9105f2cb60a6",
+    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fweidmann-negra_-schwarzbier-removebg-preview%201.png?alt=media&token=e2a407a5-c1d8-407e-b733-51f35edacbea",
   ];
 
   const splideOptions = {

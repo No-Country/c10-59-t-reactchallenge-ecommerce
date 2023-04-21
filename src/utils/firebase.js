@@ -3,15 +3,15 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA7oVgqU8ZigMt4rAp1EolhVZRNfvJSDOY",
-  authDomain: "project-beer-ecommerce.firebaseapp.com",
-  projectId: "project-beer-ecommerce",
-  storageBucket: "project-beer-ecommerce.appspot.com",
-  messagingSenderId: "198773382290",
-  appId: "1:198773382290:web:9c0022fc3ab48bd34c9a4b"
+  apiKey: "AIzaSyCB6LkeM886Vkfqke1WRS8vxZGFu-nKHL0",
+  authDomain: "proyecto-birra.firebaseapp.com",
+  projectId: "proyecto-birra",
+  storageBucket: "proyecto-birra.appspot.com",
+  messagingSenderId: "820840006736",
+  appId: "1:820840006736:web:7887b793922b1540e17d55"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app)
