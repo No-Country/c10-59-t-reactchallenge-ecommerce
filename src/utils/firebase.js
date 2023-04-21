@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCB6LkeM886Vkfqke1WRS8vxZGFu-nKHL0",
-  authDomain: "proyecto-birra.firebaseapp.com",
-  projectId: "proyecto-birra",
-  storageBucket: "proyecto-birra.appspot.com",
-  messagingSenderId: "820840006736",
-  appId: "1:820840006736:web:7887b793922b1540e17d55"
+  apiKey: "AIzaSyDaFWNqXRKDVM62mzgrWLN5n0DLkemQamU",
+  authDomain: "project-birra-eb422.firebaseapp.com",
+  projectId: "project-birra-eb422",
+  storageBucket: "project-birra-eb422.appspot.com",
+  messagingSenderId: "51660511931",
+  appId: "1:51660511931:web:a0a91e138a6f5e811a679e"
 };
 
 

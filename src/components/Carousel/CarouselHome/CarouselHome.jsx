@@ -4,9 +4,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const CarouselHome = () => {
   const imagesList = [
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-home%2Fcarousel1.jpg?alt=media&token=5434ff36-06f8-425e-bf8c-0d67040caee2",
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-home%2Fcarousel2.jpg?alt=media&token=d86a262e-ad0f-4816-aa75-1ba8f83180ca",
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-home%2Fcarousel3.jpg?alt=media&token=f92ed747-064b-4e6e-a3a8-3ddbbf39ec70",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-home%2Fcarousel1.jpg?alt=media&token=81cb3a73-9a8a-4ec7-859b-96bad060c4a5",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-home%2Fcarousel2.jpg?alt=media&token=dccaecf3-2c9f-4592-8014-f04f9101e5e1",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-home%2Fcarousel3.jpg?alt=media&token=859d52df-e90f-4691-a873-8368c6b5f89c",
   ];
 
   const splideOptions = {

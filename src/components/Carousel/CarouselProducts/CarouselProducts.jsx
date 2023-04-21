@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const CarouselProducts = () => {
   const imagesList = [
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fpampa-stout-black-removebg-preview%201.png?alt=media&token=beb7e899-c389-4505-a3bf-98e060fb2c44",
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fpenon-de-aguila-red-waldbier-removebg-preview%201.png?alt=media&token=cbb88d50-74e1-4ccf-8b61-9105f2cb60a6",
-    "https://firebasestorage.googleapis.com/v0/b/proyecto-birra.appspot.com/o/carousel-products%2Fweidmann-negra_-schwarzbier-removebg-preview%201.png?alt=media&token=e2a407a5-c1d8-407e-b733-51f35edacbea",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-products%2Fpampa-stout-black-removebg-preview%201.png?alt=media&token=81269cd0-6546-4210-b9ad-07d1c0ed6c85",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-products%2Fpenon-de-aguila-red-waldbier-removebg-preview%201.png?alt=media&token=762fd981-6387-4f32-9694-d1fc5a8b16e9",
+    "https://firebasestorage.googleapis.com/v0/b/project-birra-eb422.appspot.com/o/carousel-products%2Fweidmann-negra_-schwarzbier-removebg-preview%201.png?alt=media&token=ab97c76b-d3d6-49b9-8e02-c5910c9010bf",
   ];
 
   const splideOptions = {
