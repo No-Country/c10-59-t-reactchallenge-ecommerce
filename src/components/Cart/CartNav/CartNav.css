@@ -50,4 +50,8 @@
     .cart-nav-total {
         width: 210px;
     }
+
+    .cart-nav-container {
+        z-index: 0;
+    }
 }
