@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../ProductDetail/ProductDetail";
+import Loading from "../../helpers/Loading";
 
 const ProductDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const { type, productId } = useParams();
 
   useEffect(() => {
@@ -21,6 +24,7 @@ const ProductDetailContainer = () => {
         };
 
         setProduct(data);
+        setLoading(true)
       } catch (err) {
         console.log(err);
       }
@@ -29,7 +33,7 @@ const ProductDetailContainer = () => {
     getData();
   }, [type, productId]);
 
-  return <ProductDetail product={product} />;
+  return loading ? <ProductDetail product={product}/> : <Loading/>;
 };
 
 export default ProductDetailContainer;
