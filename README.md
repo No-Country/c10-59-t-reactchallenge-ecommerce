@@ -34,7 +34,17 @@ Figma/ Illustrator/ Photoshop/ Design Thinking
 
 -------------
 
-#### Link al proyecto [https://c10-59-t-reactchallenge-ecommerce.vercel.app/]
+#### Link al proyecto 
+https://c10-59-t-reactchallenge-ecommerce.vercel.app/
 
 -------------
 
+
+<br>
+
+-------------
+
+#### Video promocional 
+https://www.canva.com/design/DAFg13WjGUc/BGbu6i4rX8YeeVBI2SJJrQ/watch?utm_content=DAFg13WjGUc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
+-------------
